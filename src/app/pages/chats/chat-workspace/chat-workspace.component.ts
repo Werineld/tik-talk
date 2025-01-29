@@ -10,9 +10,8 @@ import { AsyncPipe } from '@angular/common';
 @Component({
   selector: 'app-chat-workspace',
   imports: [
-    ChatWorkspaceHeaderComponent, 
-    ChatWorkspaceMessagesWrapperComponent, 
-    MessageInputComponent,
+    ChatWorkspaceHeaderComponent,
+    ChatWorkspaceMessagesWrapperComponent,
     AsyncPipe
   ],
   templateUrl: './chat-workspace.component.html',
