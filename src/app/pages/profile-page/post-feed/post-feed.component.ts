@@ -1,13 +1,8 @@
-import {
-  Component,
-  ElementRef,
-  inject,
-  Renderer2,
-} from '@angular/core';
-import { debounceTime, firstValueFrom, fromEvent, takeUntil } from 'rxjs';
-import { PostService } from '../../../data/services/post.service';
-import { PostInputComponent } from '../post-input/post-input.component';
-import { PostComponent } from '../post/post.component';
+import {Component, ElementRef, inject, Renderer2,} from '@angular/core';
+import {debounceTime, firstValueFrom, fromEvent} from 'rxjs';
+import {PostService} from '../../../data/services/post.service';
+import {PostInputComponent} from '../post-input/post-input.component';
+import {PostComponent} from '../post/post.component';
 
 @Component({
   selector: 'app-post-feed',

@@ -1,9 +1,8 @@
-import { Component, inject } from '@angular/core';
-import { Profile } from '../../data/interfaces/profile.interface'
-import { ProfileService } from '../../data/services/profile.service'
-import { ProfileCardComponent } from '../../common-ui/profile-card/profile-card.component';
-import { ProfileFiltersComponent } from './profile-filters/profile-filters.component'
-import { CommonModule } from '@angular/common';
+import {Component, inject} from '@angular/core';
+import {ProfileService} from '../../data/services/profile.service'
+import {ProfileCardComponent} from '../../common-ui/profile-card/profile-card.component';
+import {ProfileFiltersComponent} from './profile-filters/profile-filters.component'
+import {CommonModule} from '@angular/common';
 
 
 @Component({

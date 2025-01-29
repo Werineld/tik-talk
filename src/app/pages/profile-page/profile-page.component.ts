@@ -1,14 +1,14 @@
-import { ChatsService } from './../../data/services/chats.service';
-import { CommonModule } from '@angular/common';
-import { Component, inject, signal } from '@angular/core';
-import { toObservable } from '@angular/core/rxjs-interop';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { firstValueFrom, switchMap } from 'rxjs';
-import { ProfileHeaderComponent } from '../../common-ui/profile-header/profile-header.component';
-import { SvgIconComponent } from '../../common-ui/svg-icon/svg-icon.component';
-import { ImgUrlPipe } from '../../helpers/pipes/img-url.pipe';
-import { ProfileService } from './../../data/services/profile.service';
-import { PostFeedComponent } from './post-feed/post-feed.component';
+import {ChatsService} from './../../data/services/chats.service';
+import {CommonModule} from '@angular/common';
+import {Component, inject, signal} from '@angular/core';
+import {toObservable} from '@angular/core/rxjs-interop';
+import {ActivatedRoute, Router, RouterModule} from '@angular/router';
+import {firstValueFrom, switchMap} from 'rxjs';
+import {ProfileHeaderComponent} from '../../common-ui/profile-header/profile-header.component';
+import {SvgIconComponent} from '../../common-ui/svg-icon/svg-icon.component';
+import {ImgUrlPipe} from '../../helpers/pipes/img-url.pipe';
+import {ProfileService} from './../../data/services/profile.service';
+import {PostFeedComponent} from './post-feed/post-feed.component';
 
 @Component({
   selector: 'app-profile-page',

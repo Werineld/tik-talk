@@ -1,4 +1,4 @@
-import { Profile } from './profile.interface'
+import {Profile} from './profile.interface'
 
 export interface PostCreateDto {
 	title: string
@@ -37,4 +37,3 @@ export interface CommentCreateDto {
 	authorId: number
 	postId: number
 }
-	

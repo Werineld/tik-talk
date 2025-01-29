@@ -1,10 +1,7 @@
-import { Component, input } from '@angular/core';
-import { AvatarCircleComponent } from '../../../../common-ui/avatar-circle/avatar-circle.component'
-import { Comment } from '../../../../data/interfaces/post.interface'
-import { calcDatePipe } from '../../../../helpers/pipes/calc-date.pipe'
-
-
-
+import {Component, input} from '@angular/core';
+import {AvatarCircleComponent} from '../../../../common-ui/avatar-circle/avatar-circle.component'
+import {Comment} from '../../../../data/interfaces/post.interface'
+import {calcDatePipe} from '../../../../helpers/pipes/calc-date.pipe'
 
 
 @Component({

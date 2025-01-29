@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
-import { inject, Injectable, signal } from '@angular/core';
-import { CommentCreateDto, Post, PostCreateDto } from '../interfaces/post.interface';
-import { map, switchMap, tap } from 'rxjs'
+import {HttpClient} from '@angular/common/http';
+import {inject, Injectable, signal} from '@angular/core';
+import {CommentCreateDto, Post, PostCreateDto} from '../interfaces/post.interface';
+import {map, switchMap, tap} from 'rxjs'
 
 @Injectable({
   providedIn: 'root',

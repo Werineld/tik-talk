@@ -1,6 +1,6 @@
-import { Component, input } from '@angular/core';
-import { Profile } from '../../data/interfaces/profile.interface'
-import { AvatarCircleComponent } from '../avatar-circle/avatar-circle.component'
+import {Component, input} from '@angular/core';
+import {Profile} from '../../data/interfaces/profile.interface'
+import {AvatarCircleComponent} from '../avatar-circle/avatar-circle.component'
 
 
 @Component({
@@ -16,8 +16,8 @@ export class ProfileHeaderComponent {
 
   logProfile() {
     console.log(this.profile);
-    
+
     return this.profile
   }
-  
+
 }

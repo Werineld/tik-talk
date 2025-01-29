@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {ProfileCardComponent} from './common-ui/profile-card/profile-card.component';
-import { ReactiveFormsModule } from '@angular/forms'
+import {RouterOutlet} from '@angular/router';
+import {ReactiveFormsModule} from '@angular/forms'
+
 ReactiveFormsModule
 
 
@@ -13,5 +13,5 @@ ReactiveFormsModule
 })
 
 export class AppComponent {
-  
+
 }

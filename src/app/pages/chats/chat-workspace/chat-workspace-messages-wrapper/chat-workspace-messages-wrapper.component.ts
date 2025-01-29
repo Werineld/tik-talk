@@ -1,10 +1,9 @@
-import { Component, inject, input, signal } from '@angular/core';
-import { ChatWorkspaceMessageComponent } from "./chat-workspace-message/chat-workspace-message.component";
-import { MessageInputComponent } from "../../../../common-ui/message-input/message-input.component";
-import { ChatsService } from '../../../../data/services/chats.service'
-import { Chat } from '../../../../data/interfaces/chats.interface'
-import { firstValueFrom } from 'rxjs'
-
+import {Component, inject, input} from '@angular/core';
+import {ChatWorkspaceMessageComponent} from "./chat-workspace-message/chat-workspace-message.component";
+import {MessageInputComponent} from "../../../../common-ui/message-input/message-input.component";
+import {ChatsService} from '../../../../data/services/chats.service'
+import {Chat} from '../../../../data/interfaces/chats.interface'
+import {firstValueFrom} from 'rxjs'
 
 
 @Component({

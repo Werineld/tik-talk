@@ -1,11 +1,10 @@
-import { Component, EventEmitter, HostBinding, inject, input, Output, Renderer2 } from '@angular/core';
-import { AvatarCircleComponent } from '../../../common-ui/avatar-circle/avatar-circle.component';
-import { ProfileService } from '../../../data/services/profile.service';
-import { SvgIconComponent } from '../../../common-ui/svg-icon/svg-icon.component'
-import { PostService } from '../../../data/services/post.service'
-import { FormsModule } from '@angular/forms'
-import { firstValueFrom } from 'rxjs'
-
+import {Component, EventEmitter, HostBinding, inject, input, Output, Renderer2} from '@angular/core';
+import {AvatarCircleComponent} from '../../../common-ui/avatar-circle/avatar-circle.component';
+import {ProfileService} from '../../../data/services/profile.service';
+import {SvgIconComponent} from '../../../common-ui/svg-icon/svg-icon.component'
+import {PostService} from '../../../data/services/post.service'
+import {FormsModule} from '@angular/forms'
+import {firstValueFrom} from 'rxjs'
 
 
 @Component({
@@ -67,9 +66,9 @@ export class PostInputComponent {
         authorId: this.profile()!.id
       })
     ).then(() => this.postText = '')
-    
-  
-    
+
+
+
   }
 
 }

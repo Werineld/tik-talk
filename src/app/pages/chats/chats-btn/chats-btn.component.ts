@@ -1,6 +1,6 @@
-import { Component, input } from '@angular/core';
-import { AvatarCircleComponent } from '../../../common-ui/avatar-circle/avatar-circle.component';
-import { lastMessageRes } from '../../../data/interfaces/chats.interface'
+import {Component, input} from '@angular/core';
+import {AvatarCircleComponent} from '../../../common-ui/avatar-circle/avatar-circle.component';
+import {lastMessageRes} from '../../../data/interfaces/chats.interface'
 
 @Component({
   selector: 'button[chats]',

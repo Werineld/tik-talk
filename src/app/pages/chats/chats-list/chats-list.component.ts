@@ -1,10 +1,10 @@
-import { AsyncPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-import { map, startWith, switchMap } from 'rxjs';
-import { ChatsService } from '../../../data/services/chats.service';
-import { ChatsBtnComponent } from '../chats-btn/chats-btn.component';
+import {AsyncPipe} from '@angular/common';
+import {Component, inject} from '@angular/core';
+import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {RouterLink, RouterLinkActive} from '@angular/router';
+import {map, startWith, switchMap} from 'rxjs';
+import {ChatsService} from '../../../data/services/chats.service';
+import {ChatsBtnComponent} from '../chats-btn/chats-btn.component';
 
 @Component({
   selector: 'app-chats-list',

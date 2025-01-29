@@ -1,7 +1,6 @@
-import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { SidebarComponent } from "../sidebar/sidebar.component";
-import { ProfileService } from '../../data/services/profile.service'
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {SidebarComponent} from "../sidebar/sidebar.component";
 
 @Component({
   selector: 'app-layout',
@@ -10,7 +9,7 @@ import { ProfileService } from '../../data/services/profile.service'
   styleUrl: './layout.component.scss'
 })
 export class LayoutComponent {
-  
+
 }
 
 
