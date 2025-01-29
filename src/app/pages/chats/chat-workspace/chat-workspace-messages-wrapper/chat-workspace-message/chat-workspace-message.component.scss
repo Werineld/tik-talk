@@ -1,0 +1,29 @@
+:host {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 32px 1fr;
+  margin-bottom: 12px;
+}
+
+:host.is-mine {
+  grid-template-columns: min-content 32px;
+  justify-self: end;
+  .message-container {
+    order: -1;
+    text-align: end;
+  }
+}
+
+.message-text {
+  padding: 8px 16px;
+  background: var(--message-color);
+  width: max-content;
+  max-width: 450px;
+  text-wrap: wrap;
+  color: var(--light-color);
+  word-wrap: break-word; /* поддерживается для совместимости */
+  overflow-wrap: break-word; /* современный стандарт */
+  mask: linear-gradient(#000 0 0), linear-gradient(-135deg, #000 50%, #0000 0) border-box 100% 100% / 200% 200% no-repeat;
+  mask-composite: exclude;
+  mask-position: 3% 90%;
+}

@@ -1,0 +1,39 @@
+:host {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  grid-gap: 16px;
+  height: max-content;
+}
+
+.comment-body {
+  display: grid;
+  grid-gap: 8px;
+  padding-right: 10px;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: max-content;
+
+  color: var(--light-transparent-color);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

@@ -1,0 +1,21 @@
+:host {
+	display: grid;
+	grid-template-columns:112px 1fr;
+	grid-gap: 24px;
+
+}
+
+.username-and-name {
+	display: flex;
+	align-items: center;
+	// flex-wrap: wrap;
+	gap: 24px;
+	text-align: left;
+	width: max-content;
+}
+
+.profile-header__wrapper {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}

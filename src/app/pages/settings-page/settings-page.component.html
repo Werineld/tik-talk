@@ -1,0 +1,73 @@
+<div class="app-profile-header__wrapper">
+  <app-profile-header></app-profile-header>
+	Здесь аватарка и имя
+</div>
+
+<form class="profile-form__wrapper" [formGroup]="form">
+	<div class='profile-form'>
+
+		<div class="two-columns">
+			<label class="tt-form-label">
+				<span class="tt-form-label__text">Имя</span>
+				<input
+					type="text"
+					class="tt-form-input"
+					autocomplete="off"
+					formControlName="firstName"
+				/>
+			</label>
+
+			<label class="tt-form-label">
+				<span class="tt-form-label__text">Фамилия</span>
+				<input
+					type="text"
+					class="tt-form-input"
+					autocomplete="off"
+					formControlName="lastName"
+				/>
+			</label>
+		</div>
+
+		<label class="tt-form-label">
+			<span class="tt-form-label__text">Telegram username</span>
+			<input
+				type="text"
+				class="tt-form-input"
+				autocomplete="off"
+				formControlName="username"
+			/>
+		</label>
+
+		<label class="tt-form-label">
+			<span class="tt-form-label__text">О себе</span>
+			<textarea 
+				class="tt-form-input tt-form-textarea"
+				rows='4'
+				formControlName="description"
+			>	
+			</textarea>
+		</label>
+
+		<label class="tt-form-label" #pew>
+			<span class="tt-form-label__text">Аватарка</span>
+			<app-avatar-upload></app-avatar-upload>
+		</label>
+
+		<label class="tt-form-label">
+			<span class="tt-form-label__text">Навыки</span>
+			<input
+				type="text"
+				class="tt-form-input"
+				autocomplete="off"
+				formControlName="stack"
+			/>
+		</label>
+
+	</div>
+
+	<div>
+		<div>
+			<button class="btn" (click)="onSave()">Сохранить</button>
+		</div>
+	</div>
+</form>

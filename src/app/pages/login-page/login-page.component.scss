@@ -1,0 +1,43 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100dvh;
+  align-items: center;
+  margin: 0 5%;
+}
+
+.login-form {
+  width: 440px;
+}
+
+.login-form,
+.big-logo {
+  place-self: center;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-eye-button {
+  position: absolute;
+  top: 55%;
+  right: 12px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #ffffffbf;
+  cursor: pointer;
+}
+
+.password-eye-button svg {
+  fill: currentColor !important;
+}
+
+:host ::ng-deep .password-input .password-eye-button.active {
+  color: var(--primary-color) !important;
+}
+
+:host ::ng-deep .password-input .password-eye-button.active svg {
+  fill: var(--primary-color) !important;
+}
