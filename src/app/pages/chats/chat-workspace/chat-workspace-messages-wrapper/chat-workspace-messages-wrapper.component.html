@@ -1,6 +1,7 @@
 <div class="messages-container">
   @for (group of messages(); track group.day) {
-    <div class="date-header">{{ group.day }}</div> <!-- Дата -->
+    <div class="date-header">{{ group.day }}</div>
+    <!-- Дата -->
 
     @for (msg of group.messages; track msg.id) {
       <app-chat-workspace-message [message]="msg"></app-chat-workspace-message>

@@ -1,33 +1,25 @@
-import {Component, ElementRef, inject, input, Renderer2} from '@angular/core';
-import {ChatWorkspaceMessageComponent} from "./chat-workspace-message/chat-workspace-message.component";
-import {MessageInputComponent} from "../../../../common-ui/message-input/message-input.component";
-import {ChatsService} from '../../../../data/services/chats.service'
-import {Chat} from '../../../../data/interfaces/chats.interface'
-import {debounceTime, firstValueFrom, fromEvent} from 'rxjs'
-import {calcDatePipe} from '../../../../helpers/pipes/calc-date.pipe';
-
+import { Component, ElementRef, inject, input, Renderer2 } from '@angular/core';
+import { ChatWorkspaceMessageComponent } from './chat-workspace-message/chat-workspace-message.component';
+import { MessageInputComponent } from '../../../../common-ui/message-input/message-input.component';
+import { ChatsService } from '../../../../data/services/chats.service';
+import { Chat } from '../../../../data/interfaces/chats.interface';
+import { debounceTime, firstValueFrom, fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-chat-workspace-messages-wrapper',
-  imports: [
-    ChatWorkspaceMessageComponent,
-    MessageInputComponent,
-    calcDatePipe
-  ],
+  imports: [ChatWorkspaceMessageComponent, MessageInputComponent],
   templateUrl: './chat-workspace-messages-wrapper.component.html',
-  styleUrl: './chat-workspace-messages-wrapper.component.scss'
+  styleUrl: './chat-workspace-messages-wrapper.component.scss',
 })
 export class ChatWorkspaceMessagesWrapperComponent {
   r2 = inject(Renderer2);
   hostElement = inject(ElementRef);
 
-  chatsService = inject(ChatsService)
+  chatsService = inject(ChatsService);
 
-  chat = input.required<Chat>()
+  chat = input.required<Chat>();
 
   messages = this.chatsService.groupedMessages;
-
-
 
   ngOnInit() {
     this.resizeFeed();
@@ -41,16 +33,15 @@ export class ChatWorkspaceMessagesWrapperComponent {
   }
 
   resizeFeed() {
-
-    const height = window.innerHeight - 50 - 65 ;
+    const height = window.innerHeight - 50 - 65;
     this.r2.setStyle(this.hostElement.nativeElement, 'height', `${height}px`);
   }
 
   async onSendMessage(messageText: string) {
-    await firstValueFrom(this.chatsService.sendMessage(this.chat().id, messageText))
+    await firstValueFrom(
+      this.chatsService.sendMessage(this.chat().id, messageText),
+    );
 
-    await firstValueFrom(this.chatsService.getChatById(this.chat().id))
+    await firstValueFrom(this.chatsService.getChatById(this.chat().id));
   }
-
-
 }

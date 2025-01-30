@@ -15,11 +15,13 @@
   color: var(--light-color);
   word-wrap: break-word; /* поддерживается для совместимости */
   overflow-wrap: break-word; /* современный стандарт */
-  mask: linear-gradient(#000 0 0), linear-gradient(135deg, #000 50%, #0000 0) border-box 100% 100% / 200% 200% no-repeat;
+  mask:
+    linear-gradient(#000 0 0),
+    linear-gradient(135deg, #000 50%, #0000 0) border-box 100% 100% / 200% 200%
+      no-repeat;
   mask-composite: exclude;
-  mask-position: 96% 96% ;
+  mask-position: 96% 96%;
 }
-
 
 :host.is-mine {
   grid-template-columns: min-content 32px;
@@ -31,11 +33,13 @@
   }
 
   .message-text {
-    mask: linear-gradient(#000 0 0), linear-gradient(-135deg, #000 50%, #0000 0) border-box 100% 100% / 200% 200% no-repeat;
+    mask:
+      linear-gradient(#000 0 0),
+      linear-gradient(-135deg, #000 50%, #0000 0) border-box 100% 100% / 200%
+        200% no-repeat;
     mask-composite: exclude;
     mask-position: 3% 90%;
     color: #000;
     background: var(--primary-color);
   }
 }
-
