@@ -7,3 +7,13 @@
 .messages-container {
   overflow-y: scroll;
 }
+
+.date-header {
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  background: #536078;
+  width: fit-content;
+  text-wrap: nowrap;
+  border-radius: 3px;
+}

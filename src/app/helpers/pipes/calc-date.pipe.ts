@@ -23,8 +23,10 @@ export class calcDatePipe implements PipeTransform {
 			return `${minutes} минут${minutes % 10 === 1 && minutes % 100 !== 11 ? 'у' : minutes % 10 >= 2 && minutes % 10 <= 4 && (minutes % 100 < 10 || minutes % 100 >= 20) ? 'ы' : ''} назад`;
 		} else if (hours < 24) {
 			return `${hours} час${hours % 10 === 1 && hours % 100 !== 11 ? '' : hours % 10 >= 2 && hours % 10 <= 4 && (hours % 100 < 10 || hours % 100 >= 20) ? 'а' : 'ов'} назад`;
-		} else {
-			return `${days} день${days % 10 >= 2 && days % 10 <= 4 && (days % 100 < 10 || days % 100 >= 20) ? 'я' : 'ей'} назад`;
+		} else if (days % 10 === 1) {
+      return `${days} день назад`
+    } else {
+			return `${days} д${days % 10 >= 2 && days % 10 <= 4 && (days % 100 < 10 || days % 100 >= 20) ? 'ня' : 'ней'} назад`;
 		}
   }
 }

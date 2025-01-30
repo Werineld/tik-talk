@@ -1,10 +1,11 @@
 <div class="messages-container">
-  @for (message of messages(); track message.id) {
-    <app-chat-workspace-message
-      [message]="message"
-    ></app-chat-workspace-message>
+  @for (group of messages(); track group.day) {
+    <div class="date-header">{{ group.day }}</div> <!-- Дата -->
+
+    @for (msg of group.messages; track msg.id) {
+      <app-chat-workspace-message [message]="msg"></app-chat-workspace-message>
+    }
   }
 </div>
-<app-message-input
-	(created)="onSendMessage($event)"
-></app-message-input>
+
+<app-message-input (created)="onSendMessage($event)"></app-message-input>

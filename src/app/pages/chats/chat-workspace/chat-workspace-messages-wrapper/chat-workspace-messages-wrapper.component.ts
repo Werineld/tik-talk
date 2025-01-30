@@ -4,13 +4,15 @@ import {MessageInputComponent} from "../../../../common-ui/message-input/message
 import {ChatsService} from '../../../../data/services/chats.service'
 import {Chat} from '../../../../data/interfaces/chats.interface'
 import {debounceTime, firstValueFrom, fromEvent} from 'rxjs'
+import {calcDatePipe} from '../../../../helpers/pipes/calc-date.pipe';
 
 
 @Component({
   selector: 'app-chat-workspace-messages-wrapper',
   imports: [
     ChatWorkspaceMessageComponent,
-    MessageInputComponent
+    MessageInputComponent,
+    calcDatePipe
   ],
   templateUrl: './chat-workspace-messages-wrapper.component.html',
   styleUrl: './chat-workspace-messages-wrapper.component.scss'
@@ -23,7 +25,9 @@ export class ChatWorkspaceMessagesWrapperComponent {
 
   chat = input.required<Chat>()
 
-  messages = this.chatsService.activeChatMessages
+  messages = this.chatsService.groupedMessages;
+
+
 
   ngOnInit() {
     this.resizeFeed();
