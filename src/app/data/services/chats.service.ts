@@ -30,20 +30,25 @@ export class ChatsService {
       .pipe(
         map(chat => {
           const patchedMessages = chat.messages.map(message => {
+
             return {
               ...message,
               user: chat.userFirst.id === message.userFromId ? chat.userFirst : chat.userSecond,
               isMine: message.userFromId === this.me()!.id
             }
+
           })
 
           this.activeChatMessages.set(patchedMessages)
+          console.log(patchedMessages)
           return {
             ...chat,
             companion: chat.userFirst.id === this.me()!.id ? chat.userSecond : chat.userFirst,
             messages: patchedMessages
           }
+
         })
+
       );
   }
 

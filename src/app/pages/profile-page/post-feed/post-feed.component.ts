@@ -21,7 +21,7 @@ export class PostFeedComponent {
     firstValueFrom(this.postService.fetchPosts());
   }
 
-  ngAfterViewInit() {
+  ngOnInit() {
     this.resizeFeed();
 
     fromEvent(window, 'resize')
@@ -35,7 +35,7 @@ export class PostFeedComponent {
   resizeFeed() {
     const { top } = this.hostElement.nativeElement.getBoundingClientRect();
 
-    const height = window.innerHeight - top - 24 - 68;
+    const height = window.innerHeight - top - 96 ;
     this.r2.setStyle(this.hostElement.nativeElement, 'height', `${height}px`);
   }
 }

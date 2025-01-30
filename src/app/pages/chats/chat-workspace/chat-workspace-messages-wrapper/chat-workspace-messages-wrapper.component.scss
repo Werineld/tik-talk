@@ -4,3 +4,6 @@
 	grid-template-rows: 1fr min-content;
 }
 
+.messages-container {
+  overflow-y: scroll;
+}

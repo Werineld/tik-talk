@@ -7,7 +7,7 @@ import {firstValueFrom, switchMap} from 'rxjs';
 import {ProfileHeaderComponent} from '../../common-ui/profile-header/profile-header.component';
 import {SvgIconComponent} from '../../common-ui/svg-icon/svg-icon.component';
 import {ImgUrlPipe} from '../../helpers/pipes/img-url.pipe';
-import {ProfileService} from './../../data/services/profile.service';
+import {ProfileService} from '../../data/services/profile.service';
 import {PostFeedComponent} from './post-feed/post-feed.component';
 
 @Component({
