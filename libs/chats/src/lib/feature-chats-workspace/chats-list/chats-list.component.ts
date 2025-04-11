@@ -3,7 +3,7 @@ import { Component, ElementRef, inject, Renderer2 } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { debounceTime, fromEvent, map, startWith, switchMap } from 'rxjs';
-import { ChatsService } from '../../data/services/chats.service';
+import { ChatsService } from '@tt/data-access';
 import { ChatsBtnComponent } from '../chats-btn/chats-btn.component';
 
 @Component({

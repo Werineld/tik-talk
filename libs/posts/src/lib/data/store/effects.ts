@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { PostService } from '../services/post.service';
+import { PostService } from '@tt/data-access';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { postActions } from './actions';
 import { map, switchMap } from 'rxjs';

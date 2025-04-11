@@ -1,5 +1,5 @@
 import { createActionGroup, props } from '@ngrx/store';
-import { Profile } from '@tt/interfaces/profile';
+import { Profile } from '@tt/data-access';
 
 export const profileActions = createActionGroup({
   source: 'profile',

@@ -1,10 +1,11 @@
 import { Component, inject, input } from '@angular/core';
-import { Post, postActions, selectCommentsByPostId } from '../../data/';
+import { postActions, selectCommentsByPostId } from '../../data/';
 import { SvgIconComponent } from '@tt/common-ui';
 import { CommentComponent, PostInputComponent } from '../../ui';
 import { AvatarCircleComponent, calcDatePipe } from '@tt/common-ui';
 import { Store } from '@ngrx/store';
-import { GlobalStoreService } from '@tt/shared';
+import { GlobalStoreService } from '@tt/data-access';
+import { Post } from '@tt/data-access'
 
 @Component({
   selector: 'app-post',

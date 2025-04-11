@@ -1,4 +1,4 @@
-import { Profile } from '@tt/interfaces/profile';
+import { Profile } from '@tt/data-access';
 import { createFeature, createReducer, on } from '@ngrx/store';
 import { profileActions } from './actions';
 

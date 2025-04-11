@@ -1,5 +1,5 @@
 import { createActionGroup, props } from '@ngrx/store';
-import { CommentCreateDto, Post, PostComment, PostCreateDto } from '../interfaces/post.interface';
+import { CommentCreateDto, Post, PostComment, PostCreateDto } from '@tt/data-access';
 
 export const postActions = createActionGroup({
   source: 'posts',

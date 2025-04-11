@@ -10,7 +10,7 @@ import {
 import { AvatarCircleComponent } from '@tt/common-ui';
 import { SvgIconComponent } from '@tt/common-ui';
 import { FormsModule } from '@angular/forms';
-import { GlobalStoreService } from '@tt/shared';
+import { GlobalStoreService } from '@tt/data-access';
 
 @Component({
   selector: 'app-post-input',

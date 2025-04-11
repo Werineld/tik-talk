@@ -5,7 +5,7 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { PostFeedComponent } from '@tt/posts';
 import { ImgUrlPipe, SvgIconComponent } from '@tt/common-ui';
 import { ProfileHeaderComponent } from '../../ui';
-import { ProfileService } from '../../data';
+import { ProfileService } from '@tt/data-access';
 import { switchMap } from 'rxjs';
 
 @Component({

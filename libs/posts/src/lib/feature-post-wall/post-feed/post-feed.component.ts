@@ -1,12 +1,10 @@
 import { Component, ElementRef, inject, Renderer2 } from '@angular/core';
-import { debounceTime, firstValueFrom, fromEvent } from 'rxjs';
+import { debounceTime, fromEvent } from 'rxjs';
 import { postActions, selectAllPosts } from '../../data';
 import { PostInputComponent } from '../../ui';
 import { PostComponent } from '../post/post.component';
 import { Store } from '@ngrx/store';
-import { PostService } from '../../data';
-import { Post } from '../../data';
-import { GlobalStoreService } from '@tt/shared';
+import { GlobalStoreService } from '@tt/data-access';
 
 @Component({
   selector: 'app-post-feed',
