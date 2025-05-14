@@ -1,5 +1,5 @@
-import { Component, inject, input } from '@angular/core';
-import { postActions, selectCommentsByPostId } from '../../data/';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
+import { postActions, selectCommentsByPostId } from '@tt/data-access';
 import { SvgIconComponent } from '@tt/common-ui';
 import { CommentComponent, PostInputComponent } from '../../ui';
 import { AvatarCircleComponent, calcDatePipe } from '@tt/common-ui';
@@ -18,6 +18,7 @@ import { Post } from '@tt/data-access'
   ],
   templateUrl: './post.component.html',
   styleUrl: './post.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PostComponent {
   post = input<Post>();

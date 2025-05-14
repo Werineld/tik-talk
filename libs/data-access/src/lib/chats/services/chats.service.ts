@@ -18,12 +18,13 @@ export class ChatsService {
   me = inject(ProfileService).me;
 
   wsAdapter: ChatWSService = new ChatWSRxjsService()
+  unreadMessageCount = signal(0)
 
   activeChatMessages = signal<Message[]>([]);
 
   baseApiUrl = 'https://icherniakov.ru/yt-course/';
   chatsUrl = `${this.baseApiUrl}chat/`;
-  messageUrl = `${this.baseApiUrl}message/`;
+  // messageUrl = `${this.baseApiUrl}message/`;
 
   connectWS() {
     return this.wsAdapter.connect({
@@ -33,18 +34,11 @@ export class ChatsService {
     }) as Observable<ChatWSMessage>;
   }
 
-  reconnectWS() {
-    this.wsAdapter.disconnect();
-    this.connectWS()
-  }
-
-
-
   handleWSMessage = (message: ChatWSMessage) => {
     if (!('action' in message)) return
 
     if (isUnreadMessage(message)) {
-      message.data.count
+      this.unreadMessageCount.set(message.data.count);
     }
 
     if (isNewMessage(message)) {
@@ -123,13 +117,14 @@ export class ChatsService {
     );
   }
 
-  sendMessage(chatId: number, message: string) {
-    return this.http.post(
-      `${this.messageUrl}send/${chatId}`,
-      {},
-      {
-        params: { message },
-      },
-    );
-  }
+  // sendMessage(chatId: number, message: string) {
+  //   return this.http.post(
+  //     `${this.messageUrl}send/${chatId}`,
+  //     {},
+  //     {
+  //       params: { message },
+  //     },
+  //   );
+  // }
+
 }

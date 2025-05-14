@@ -1,9 +1,10 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   inject,
   Output,
-  Renderer2,
+  Renderer2
 } from '@angular/core';
 import { ProfileService } from '@tt/data-access';
 import { AvatarCircleComponent } from '@tt/common-ui';
@@ -15,6 +16,7 @@ import { SvgIconComponent } from '@tt/common-ui';
   imports: [AvatarCircleComponent, FormsModule, SvgIconComponent],
   templateUrl: './message-input.component.html',
   styleUrl: './message-input.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MessageInputComponent {
   r2 = inject(Renderer2);

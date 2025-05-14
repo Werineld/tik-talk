@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, input, Renderer2 } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, inject, input, Renderer2 } from '@angular/core';
 import { ChatWorkspaceMessageComponent } from './chat-workspace-message/chat-workspace-message.component';
 import { MessageInputComponent } from '../../../ui/message-input/message-input.component';
 import { ChatsService } from '@tt/data-access';
@@ -10,6 +10,7 @@ import { debounceTime, firstValueFrom, fromEvent } from 'rxjs';
   imports: [ChatWorkspaceMessageComponent, MessageInputComponent],
   templateUrl: './chat-workspace-messages-wrapper.component.html',
   styleUrl: './chat-workspace-messages-wrapper.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChatWorkspaceMessagesWrapperComponent {
   r2 = inject(Renderer2);

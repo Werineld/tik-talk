@@ -1,6 +1,6 @@
-import { Component, ElementRef, inject, Renderer2 } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, inject, Renderer2 } from '@angular/core';
 import { debounceTime, fromEvent } from 'rxjs';
-import { postActions, selectAllPosts } from '../../data';
+import { postActions, selectAllPosts } from '@tt/data-access';
 import { PostInputComponent } from '../../ui';
 import { PostComponent } from '../post/post.component';
 import { Store } from '@ngrx/store';
@@ -11,6 +11,7 @@ import { GlobalStoreService } from '@tt/data-access';
   imports: [PostInputComponent, PostComponent],
   templateUrl: './post-feed.component.html',
   styleUrl: './post-feed.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PostFeedComponent {
   r2 = inject(Renderer2);

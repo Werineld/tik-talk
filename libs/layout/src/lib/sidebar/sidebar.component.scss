@@ -14,7 +14,7 @@
 
 .menu-item {
   display: grid;
-  grid-template-columns: 16px 1fr max-content;
+  grid-template-columns: 16px 1fr 16px max-content;
   grid-gap: 12px;
   align-items: center;
   text-align: left;
@@ -44,6 +44,14 @@
 .menu-svg {
   width: 16px !important;
   height: 16px !important;
+}
+
+.message-count {
+  width: 24px;
+  height: 24px;
+  background-color: var(--primary-color);
+  color: var(--dark-active);
+  text-align: center;
 }
 
 .to-subscribers {
