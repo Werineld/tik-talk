@@ -1,0 +1,74 @@
+:host {
+  display: block;
+  height: 100%; /* занимает всю высоту лейаута */
+  overflow-y: auto; /* скролл только если контент больше экрана */
+}
+
+form {
+  padding: 0 20px;
+  max-width: 540px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  min-height: 100%; /* гарантирует, что форма займет минимум всю высоту */
+  box-sizing: border-box; /* учитывает padding в высоту */
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.add-form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-form-btn {
+  width: fit-content;
+}
+
+.delete-form-btn {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.checkbox__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tt-input.ng-invalid.ng-touched {
+  border: 2px solid tomato;
+}
+
+.validation {
+  display: none;
+}
+
+.tt-input.ng-invalid.ng-touched + .validation{
+  display : block;
+}
+
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.two-columns label {
+  width: 100%;
+}
+
+.tt-input::-webkit-calendar-picker-indicator {
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+.tt-input.ng-pending {
+  border: 2px dashed var(--primary-color);
+}
+//.ng-submitted {
+//
+//}

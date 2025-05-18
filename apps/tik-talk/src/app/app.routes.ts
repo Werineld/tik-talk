@@ -6,7 +6,7 @@ import { ProfilePageComponent } from '@tt/profile';
 import { SearchPageComponent } from '@tt/profile';
 import { SettingsPageComponent } from '@tt/profile';
 import { chatsRoutes } from '@tt/chats';
-import { FormsExperimentalComponent } from './experimental/forms-experimental/forms-experimental.component';
+import { FormsExperimentalComponent } from '../../../../libs/form/src/lib/form/forms-experimental.component';
 import { provideState } from '@ngrx/store';
 import { profileFeature, profileEffects, PostEffects, postFeature } from '@tt/data-access';
 import { provideEffects } from '@ngrx/effects';
