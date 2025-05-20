@@ -22,7 +22,7 @@ export class ChatsService {
 
   activeChatMessages = signal<Message[]>([]);
 
-  baseApiUrl = 'https://icherniakov.ru/yt-course/';
+  baseApiUrl = '/yt-course/';
   chatsUrl = `${this.baseApiUrl}chat/`;
   // messageUrl = `${this.baseApiUrl}message/`;
 

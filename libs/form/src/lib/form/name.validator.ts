@@ -12,7 +12,7 @@ export class NameValidator implements AsyncValidator {
   http = inject(HttpClient)
 
   validate(control: AbstractControl): Observable<ValidationErrors | null> {
-    return this.http.get<Profile[]>('https://icherniakov.ru/yt-course/account/test_accounts')
+    return this.http.get<Profile[]>('/yt-course/account/test_accounts')
       .pipe(
         delay(1000),
         map((users) => {
