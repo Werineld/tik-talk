@@ -6,10 +6,18 @@ import { ProfilePageComponent } from '@tt/profile';
 import { SearchPageComponent } from '@tt/profile';
 import { SettingsPageComponent } from '@tt/profile';
 import { chatsRoutes } from '@tt/chats';
-import { FormsExperimentalComponent } from '../../../../libs/form/src/lib/form/forms-experimental.component';
+import { FormsExperimentalComponent } from '@tt/form';
 import { provideState } from '@ngrx/store';
-import { profileFeature, profileEffects, PostEffects, postFeature } from '@tt/data-access';
+import {
+  profileFeature,
+  profileEffects,
+  PostEffects,
+  postFeature,
+  communityFeature,
+  CommunityEffects
+} from '@tt/data-access';
 import { provideEffects } from '@ngrx/effects';
+import { CommunitiesPageComponent } from '@tt/community';
 
 export const routes: Routes = [
   {
@@ -28,6 +36,14 @@ export const routes: Routes = [
         providers: [
           provideState(profileFeature),
           provideEffects(profileEffects)
+        ]
+      },
+      {
+        path: 'communities',
+        component: CommunitiesPageComponent,
+        providers: [
+          provideState(communityFeature),
+          provideEffects(CommunityEffects)
         ]
       },
       { path: 'form', component: FormsExperimentalComponent },

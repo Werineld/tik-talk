@@ -1,0 +1,13 @@
+:host {
+  --tt-input-padding: 12px 20px;
+  --tt-input-border: 1px solid var(--light-color);
+  --tt-input-border-bottom: 1px solid var(--light-color);
+  --tt-input-border-radius: 4px
+}
+
+.tt-input {
+  border: var(--tt-input-border);
+  border-bottom: var(--tt-input-border-bottom);
+  padding: var(--tt-input-padding);
+  border-radius: var(--tt-input-border-radius);
+}

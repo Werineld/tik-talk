@@ -1,0 +1,31 @@
+@if (community) {
+  <img
+    [alt]="community.name"
+    [src]="community.avatarUrl | imgUrl"
+    class="community-avatar"
+  >
+  <div class="community-info">
+    <div class="community-name">{{ community.name }}</div>
+    <div class="community-subs">{{ community.subscribersAmount | plural:'подписчик':'подписчика':'подписчиков' }}</div>
+  </div>
+  <div class="community-tags flex-align-center">
+    @for (tag of community.tags; track tag) {
+      <div class="skill-tag">{{ tag }}</div>
+    }
+  </div>
+  <div class="community-btns flex-align-center" >
+    @if (this.isJoined()) {
+      <button class="subscribe-btn btn" (click)="unsubscribe(community.id)">
+        Отписаться
+      </button>
+    } @else if (community.admin.id === this.me()?.id){
+
+    } @else if (!this.isJoined()) {
+      <button class="subscribe-btn btn" (click)="subscribe(community.id)">
+        Подписаться
+        <svg class="subscribe-icon" icon="subscribe"></svg>
+      </button>
+    }
+    <button class="open-btn btn"><svg icon="open" class="open-icon"></svg></button>
+  </div>
+}

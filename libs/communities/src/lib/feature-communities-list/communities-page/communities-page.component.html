@@ -1,0 +1,18 @@
+<div class="communities-header">
+  <div class="communities-title">Сообщества</div>
+  <button class="create-community-btn">
+    Создать сообщество
+    <svg class="create-community-icon" icon="community"></svg>
+  </button>
+</div>
+
+<tt-communities-filter></tt-communities-filter>
+
+<div class="community-list">
+  @for (community of communities(); track community.id) {
+    <tt-community-card
+      [community]="community"
+    ></tt-community-card>
+  }
+</div>
+

@@ -1,0 +1,75 @@
+.custom-select {
+  position: relative;
+  border-bottom: 1px solid var(--light-color);
+  height: 46px;
+  margin-top: 8px;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.custom-select__dropdown {
+  display: flex;
+  position: absolute;
+  margin-top: 8px;
+  background: #000;
+  border: 1px solid var(--light-color);
+  box-shadow: 4px 4px 0px 0px #FFFFFF40;
+  list-style-type: none;
+  width: 100%;
+  padding: 16px 12px;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.theme-text {
+  padding: 4px 8px;
+  border: 1px solid var(--light-color);
+}
+
+.theme-btn__delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--light-color);
+  padding: 4px;
+  :hover {
+    color: var(--primary-color);
+  }
+}
+
+.check-item {
+  color: transparent;
+}
+
+.dropdown-item.selected{
+  background: var(--dark-active);
+
+  .theme-text{
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+  }
+
+  .check-item {
+    color: var(--primary-color);
+  }
+}
+
+.dropdown-item:hover {
+  background: var(--dark-active);
+}
+
+.placeholder {
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: JetBrains Mono, sans-serif;
+}

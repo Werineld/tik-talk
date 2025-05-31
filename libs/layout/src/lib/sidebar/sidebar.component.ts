@@ -46,6 +46,11 @@ export class SidebarComponent implements OnInit {
       unreadMessages: this.unreadMessages()
     },
     {
+      label: 'Сообщества',
+      icon: 'community',
+      link: 'communities',
+    },
+    {
       label: 'Поиск',
       icon: 'search',
       link: 'search',

@@ -160,6 +160,7 @@ body {
   line-height: 21px;
   font-family: 'JetBrains Mono', sans-serif;
   color: var(--light-color);
+  outline: none;
 }
 
 .tt-form-label {
@@ -198,4 +199,9 @@ body {
 .tt-form-textarea {
   height: 84px;
   resize: none;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
 }

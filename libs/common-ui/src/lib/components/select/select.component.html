@@ -1,0 +1,33 @@
+<label class="tt-control-label mb16">
+  <ng-content></ng-content>
+
+  <div class="custom-select" (click)="toggleDropdown()">
+    @if (selectedValue() && selectedValue()!.length > 0) {
+      <span class="theme-text">
+        <button type="button" (click)="onThemeDelete($event)" class="theme-btn__delete svg16">
+          <svg icon="cross" class="svg10"></svg>
+        </button>
+        {{ selectedValue()![0] }}
+      </span>
+    } @else {
+      <span class="placeholder">{{ placeholder }}</span>
+    }
+  </div>
+
+  @if (isOpened()) {
+    <ul class="custom-select__dropdown">
+      @for (option of options; track option) {
+        <li
+          class="dropdown-item"
+          (click)="onSelectOption([option])"
+          [class.selected]="selectedValue() && selectedValue()!.includes(option)"
+        >
+          <div class="theme-text">{{ option }}</div>
+          @if (selectedValue() && selectedValue()!.includes(option)) {
+            <svg icon="check" class="check-item svg16" />
+          }
+        </li>
+      }
+    </ul>
+  }
+</label>

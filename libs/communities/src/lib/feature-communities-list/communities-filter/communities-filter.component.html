@@ -1,0 +1,25 @@
+<form class="community-search-form mt20" [formGroup]="searchForm">
+  <tt-input
+    type="text"
+    placeholder="Выберите"
+    formControlName="name"
+  >
+    Название сообщества
+    <svg icon="search" class="search-icon"></svg>
+  </tt-input>
+
+  <tt-select
+    [options]="['PROGRAMMING', 'TECHNOLOGY', 'EDUCATION', 'SPORT', 'OTHER']"
+    [placeholder]="'Выберите'"
+    formControlName="themes"
+  >
+    Темы
+  </tt-select>
+
+  <tt-stack-input
+    placeholder="Выберите"
+    formControlName="tags"
+  >
+    Теги
+  </tt-stack-input>
+</form>

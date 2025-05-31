@@ -1,4 +1,4 @@
 export * from './selectors'
 export * from './actions'
-export { postFeature } from './reducer'
+export * from './reducer'
 export * from './effects'

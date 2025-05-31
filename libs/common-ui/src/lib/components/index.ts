@@ -4,5 +4,6 @@ import { InfiniteScrollTriggerComponent } from './infinite-scroll-trigger/infini
 import { TtInputComponent } from './tt-input/tt-input.component'
 import { StackInputComponent } from './stack-input/stack-input.component';
 import { AddressInputComponent } from './address-input/address-input.component';
+import { SelectComponent } from './select/select.component';
 
-export { SvgIconComponent, AvatarCircleComponent, InfiniteScrollTriggerComponent, TtInputComponent, StackInputComponent,AddressInputComponent };
+export { SvgIconComponent, AvatarCircleComponent, InfiniteScrollTriggerComponent, TtInputComponent, StackInputComponent,AddressInputComponent, SelectComponent };
